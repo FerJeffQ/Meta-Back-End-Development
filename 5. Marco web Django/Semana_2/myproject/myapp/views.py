@@ -28,3 +28,12 @@ def home(request):
     """
 
     return HttpResponse(msg, content_type='text/html', charset='utf-8')
+
+def drinks(request, drink_name):
+    items = {
+        'moca':'tipo de cafe',
+        'te':'tipo de bebida',
+        'limonada':'tipo de refresco'
+    }
+    description = items[drink_name]
+    return HttpResponse(f"<h2> {drink_name} </h2>" + description)
