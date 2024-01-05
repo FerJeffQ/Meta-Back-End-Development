@@ -22,3 +22,5 @@ urlpatterns = [
     # path('',include('myapp.urls')),
     path('',include('myapp.urls')),
 ]
+
+handler404 = 'myproject.views.handle404'
